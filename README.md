@@ -1,5 +1,3 @@
-README
-
-auth-react
+# websocket-simple
 
 аутентификация React + Redux + Firebase
