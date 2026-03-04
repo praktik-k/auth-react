@@ -1,18 +1,16 @@
-import { useEffect } from "react";
-import { getAuth } from "firebase/auth";
-import app from "./firebase";
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
 
-  useEffect(() => {
-    const auth = getAuth(app);
-    console.log("Auth instance:", auth);
-  }, []);
-
   return (
-    <div>
-      auth-react
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+    </Routes>
   );
 }
 
